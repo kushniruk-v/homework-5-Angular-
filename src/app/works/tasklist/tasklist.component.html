@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand">Last works >>></a>
+    <a
+      [routerLink]="['/works/cenzor']"
+      routerLinkActive="active"
+      class="nav-link no-active"
+      >Cenzor</a
+    >
+
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul
+        class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+        style="--bs-scroll-height: 100px"
+      >
+        <li class="nav-item">
+          <a
+            [routerLink]="['/works/userlist']"
+            routerLinkActive="active"
+            class="nav-link no-active"
+            aria-current="page"
+            >Users</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link navbar-brand active">Tasks</a>
+        </li>
+      </ul>
+    </div>
+    <a
+      [routerLink]="['/']"
+      routerLinkActive="active"
+      class="navbar-brand back-home"
+      >Back to >>>Home</a
+    >
+  </div>
+</nav>
+<hr class="border border-danger border opacity-50" />
+
+<!-- conteiner -->
+<div class="conteiner">
+  <div class="block">
+    <h2>Plan your day!</h2>
+    <h3>User:Vasyl Kushniruk. Count of task {{ count }}</h3>
+    <hr />
+    <input type="text" class="task" [(ngModel)]="newTask" />
+    <button class="btn-add" (click)="addTask()" [disabled]="!newTask">
+      Add
+    </button>
+    <hr />
+  </div>
+
+  <app-child [allTask]="arrTask" (removeTask)="remove($event)"></app-child>
+</div>

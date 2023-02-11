@@ -1,0 +1,73 @@
+.table {
+  width: 900px;
+}
+table,
+tr {
+  border-top: 2px solid grey;
+  border-bottom: 2px solid grey;
+  border-collapse: collapse;
+  margin-left: 100px;
+}
+td {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.task-list:hover {
+  background-color: rgb(228, 233, 233);
+}
+.edit_task {
+  width: 50px;
+  height: 30px;
+  background-color: rgb(230, 216, 20);
+  color: black;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+}
+.delete_task {
+  width: 80px;
+  height: 30px;
+  background-color: rgb(245, 33, 26);
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+}
+input:disabled {
+  background-color: rgb(207, 79, 75);
+}
+.edit-container {
+  width: 800px;
+  height: 50px;
+  margin: 10px 0 0 100px;
+
+  background-color: #c8cacc;
+  border-radius: 3px;
+}
+.input-edit {
+  width: 200px;
+  height: 25px;
+  margin: 10px 0 0 200px;
+}
+.btn-save {
+  width: 50px;
+  height: 30px;
+  background-color: rgb(20, 160, 8);
+  color: white;
+
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  margin-left: 250px;
+}
+
+input[type="text"] {
+  padding-left: 10px;
+}
+input[type="text"]:focus {
+  outline: 2px solid #2699f7;
+
+  border-radius: 3px;
+}

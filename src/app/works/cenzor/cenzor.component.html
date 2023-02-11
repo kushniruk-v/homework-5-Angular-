@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <a class="navbar-brand">Last works >>></a>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active navbar-brand" aria-current="page">Cenzor</a>
+        </li>
+        <li class="nav-item">
+          <a
+            [routerLink]="['/works/userlist']"
+            routerLinkActive="active"
+            class="nav-link no-active"
+            >Users</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a
+            [routerLink]="['/works/tasklist']"
+            routerLinkActive="active"
+            class="nav-link no-active"
+            >Tasks</a
+          >
+        </li>
+      </ul>
+    </div>
+    <a
+      [routerLink]="['/']"
+      routerLinkActive="active"
+      class="navbar-brand back-home"
+      >Back to >>>Home</a
+    >
+  </div>
+</nav>
+<hr class="border border-danger border opacity-50" />
+
+<!-- Conteiner -->
+
+<div class="conteiner">
+  <div class="header-block">
+    <h2 class="header">Angular list of prohibited words</h2>
+  </div>
+
+  <div class="block-words">
+    <div class="result-words">
+      <h4 class="bad-words">Bad words:</h4>
+      <h4 class="result-bad-words">{{ text }}</h4>
+    </div>
+    <input
+      type="text"
+      class="words-here"
+      placeholder="words here..."
+      [(ngModel)]="newBadWord"
+    />
+    <input type="button" class="add" value="Add" (click)="addBadWords()" />
+    <input type="button" class="reset" value="Reset" (click)="resetWords()" />
+    <textarea
+      class="text"
+      placeholder=" text here..."
+      [(ngModel)]="textArea"
+    ></textarea>
+    <input
+      type="button"
+      class="cenzor"
+      value="Cenzor"
+      (click)="cenzorWords()"
+    />
+  </div>
+</div>

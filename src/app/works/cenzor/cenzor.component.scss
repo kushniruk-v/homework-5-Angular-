@@ -1,0 +1,87 @@
+.navbar-nav .nav-link.active {
+  color: green;
+}
+.no-active {
+  color: rgb(30, 122, 241);
+}
+.back-home {
+  color: red;
+}
+
+header-block {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(172, 164, 164);
+}
+
+.header {
+  text-align: center;
+  padding-top: 20px;
+}
+.block-words {
+  width: 700px;
+  height: 100%;
+  margin: 50px auto;
+}
+
+.result-words {
+  display: flex;
+}
+.words-here {
+  width: 500px;
+  height: 30px;
+  margin-top: 20px;
+}
+.add {
+  width: 80px;
+  height: 30px;
+  margin-left: 10px;
+  background-color: rgb(235, 212, 13);
+  color: black;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+}
+.reset {
+  width: 80px;
+  height: 30px;
+  margin-left: 10px;
+  background-color: rgb(218, 59, 59);
+  color: white;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+}
+input[type="text"]:focus {
+  outline: 2px solid #2fc4f1;
+  border-radius: 1px;
+  border: none;
+}
+input[type="text"] {
+  padding-left: 10px;
+}
+.text {
+  width: 680px;
+  height: 200px;
+  margin-top: 20px;
+  padding: 10px 0 0 8px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+textarea:focus {
+  outline: 2px solid #2fc4f1;
+  border-radius: 1px;
+  border: none;
+}
+.cenzor {
+  width: 680px;
+  height: 30px;
+  margin-top: 10px;
+  background-color: rgb(23, 145, 23);
+  border: none;
+  border-radius: 2px;
+  color: white;
+  cursor: pointer;
+}
+.result-bad-words {
+  color: red;
+}

@@ -1,0 +1,104 @@
+.navbar-nav .nav-link.active {
+  color: green;
+}
+.no-active {
+  color: rgb(30, 122, 241);
+}
+.back-home {
+  color: red;
+}
+.conteiner {
+  margin: 30px 0 0 100px;
+  display: flex;
+}
+h3 {
+  margin-top: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+input {
+  width: 300px;
+  height: 30px;
+  margin-top: 10px;
+}
+input[type="text"]:focus {
+  outline: 3px solid #2699f7;
+  border: none;
+  border-radius: 3px;
+}
+input[type="password"]:focus {
+  outline: 3px solid #2699f7;
+  border: none;
+  border-radius: 3px;
+}
+input[type="email"]:focus {
+  outline: 3px solid #2699f7;
+  border: none;
+  border-radius: 3px;
+}
+
+input[type="text"] {
+  padding-left: 10px;
+}
+input[type="password"] {
+  padding-left: 10px;
+}
+input[type="email"] {
+  padding-left: 10px;
+}
+#add {
+  margin-top: 20px;
+  width: 300px;
+  height: 30px;
+  cursor: pointer;
+  color: white;
+  border-radius: 3px;
+  background-color: rgb(27, 141, 27);
+  border: 1px solid green;
+}
+#edit {
+  margin-top: 20px;
+  width: 300px;
+  height: 30px;
+  cursor: pointer;
+  color: white;
+  border: 1px solid rgb(20, 148, 199);
+  background-color: rgb(20, 148, 199);
+  border-radius: 3px;
+}
+#add:hover {
+  background-color: rgb(25, 110, 25);
+}
+#edit:hover {
+  background-color: rgb(37, 110, 179);
+}
+.box2 {
+  margin: 30px 0 0 70px;
+}
+
+table,
+tr {
+  border-top: 2px solid grey;
+  border-bottom: 2px solid grey;
+  border-collapse: collapse;
+}
+td {
+  width: 100px;
+  height: 30px;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.edit_user {
+  width: 50px;
+  height: 30px;
+  background-color: yellow;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.delete_user {
+  width: 70px;
+  height: 30px;
+  background-color: red;
+  border-radius: 5px;
+  cursor: pointer;
+}

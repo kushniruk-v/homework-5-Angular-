@@ -1,0 +1,110 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand">Last works >>></a>
+    <a
+      [routerLink]="['/works/cenzor']"
+      routerLinkActive="active"
+      class="nav-link no-active"
+      >Cenzor</a
+    >
+
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul
+        class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+        style="--bs-scroll-height: 100px"
+      >
+        <li class="nav-item">
+          <a class="nav-link active navbar-brand active" aria-current="page"
+            >Users</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            [routerLink]="['/works/tasklist']"
+            routerLinkActive="active"
+            class="nav-link no-active"
+            >Tasks</a
+          >
+        </li>
+      </ul>
+    </div>
+    <a
+      [routerLink]="['/']"
+      routerLinkActive="active"
+      class="navbar-brand back-home"
+      >Back to >>>Home</a
+    >
+  </div>
+</nav>
+<hr class="border border-danger border opacity-50" />
+
+<!-- Conteiner -->
+<div class="conteiner">
+  <div class="box-1">
+    <h3>Login</h3>
+    <input
+      type="text"
+      id="login"
+      placeholder="Enter login"
+      [(ngModel)]="newLogin"
+    />
+    <h3>Password</h3>
+    <input
+      type="password"
+      id="password"
+      placeholder="Enter password"
+      [(ngModel)]="newPassword"
+    />
+    <h3>Email address</h3>
+    <input
+      type="email"
+      id="email"
+      placeholder="Enter address"
+      [(ngModel)]="newEmail"
+    />
+
+    <button *ngIf="!editStatus" id="add" (click)="addUser()">Add user</button>
+    <button *ngIf="editStatus" name="edit" id="edit" (click)="saveEditUser()">
+      Edit user
+    </button>
+  </div>
+
+  <div class="box2">
+    <table class="table">
+      <thead>
+        <tr>
+          <td>#</td>
+          <td>Login</td>
+          <td>Password</td>
+          <td>Email</td>
+          <td>Edit</td>
+          <td>Delete</td>
+        </tr>
+        <tr *ngFor="let user of arrUser; index as i">
+          <td>{{ i + 1 }}</td>
+          <td>{{ user.login }}</td>
+          <td>{{ user.password }}</td>
+          <td>{{ user.email }}</td>
+          <td>
+            <input
+              type="button"
+              class="edit_user"
+              value="Edit"
+              (click)="editUser(i)"
+            />
+          </td>
+          <td>
+            <input
+              type="button"
+              class="delete_user"
+              value="Delete"
+              (click)="deleteUser(i)"
+              [disabled]="editStatus"
+            />
+          </td>
+        </tr>
+      </thead>
+    </table>
+  </div>
+</div>
+P

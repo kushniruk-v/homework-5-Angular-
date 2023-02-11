@@ -1,0 +1,51 @@
+<div class="result">
+  <table class="table">
+    <thead>
+      <tr>
+        <td>#</td>
+        <td>Task</td>
+        <td>Check</td>
+        <td>DONE/IN PROGRESS</td>
+        <td>Edit</td>
+        <td>Delete</td>
+      </tr>
+      <tr *ngFor="let name of allTask; index as i" class="task-list">
+        <td>{{ i + 1 }}</td>
+        <td>{{ name.task }}</td>
+        <td>
+          <input type="checkbox" [(ngModel)]="name.statusTask" />
+        </td>
+
+        <td
+          [ngStyle]="name.statusTask ? { color: 'green' } : { color: 'red' }"
+          [innerHTML]="name.statusTask ? 'Done' : 'In Progress'"
+        ></td>
+
+        <td>
+          <input
+            type="button"
+            class="edit_task"
+            value="Edit"
+            (click)="showEdit(i)"
+          />
+        </td>
+        <td>
+          <input
+            type="button"
+            class="delete_task"
+            value="Delete"
+            (click)="deleteTask(i)"
+            [disabled]="!name.statusTask"
+          />
+        </td>
+      </tr>
+    </thead>
+  </table>
+
+  <ng-container *ngIf="isOpen">
+    <div class="edit-container">
+      <input type="text" [(ngModel)]="editTask" class="input-edit" />
+      <button (click)="saveTask()" class="btn-save">Save</button>
+    </div>
+  </ng-container>
+</div>
